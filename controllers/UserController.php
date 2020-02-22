@@ -53,7 +53,7 @@ class UserController {
         unset($_SESSION['user']);
 
         // redirect user to main page
-        header("Location: /index/order-id/page-1");
+        header("Location: /index/order-id/sort-asc/page-1");
     }
 
 }

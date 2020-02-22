@@ -15,7 +15,7 @@ class Task {
      * @param int $page [optional] current page number
      * @return array array with tasks
      */
-    public static function getTasksList($order, $page, $sort) {
+    public static function getTasksList($order, $sort, $page) {
  
         //tasks on page
         $limit = Task::SHOW_BY_DEFAULT;

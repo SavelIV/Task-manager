@@ -18,20 +18,13 @@ class CabinetController extends AdminBase {
     /**
      * Action for "Task data edit" page
      * @param int $order [optional] sort status
+     * @param string $sort sort order
      * @param int $page [optional] current page number
      */
-    public function actionEdit($order = 'id', $page = 1) {
-
-        if (($_SESSION['sort'] != 'ASC') || (!isset($_SESSION['sort']))) {
-            $_SESSION['sort'] = 'ASC';
-        } else {
-            $_SESSION['sort'] = 'DESC';
-        }
-
-        $sort = $_SESSION['sort'];
+    public function actionEdit($order = 'id', $sort = 'ASC', $page = 1) {
 
         //get new tasks list
-        $tasksList = Task::getTasksList($order, $page, $sort);
+        $tasksList = Task::getTasksList($order, $sort, $page);
 
         // tasks amount (for page navigation)
         $total = Task::getTasksAmount();
@@ -67,7 +60,7 @@ class CabinetController extends AdminBase {
 
             $result = Task::updateTaskById($id, $options);
             
-            header("Location: /cabinet/order-id/page-1");
+            header("Location: /cabinet/order-id/sort-desc/page-1");
         }
         require_once(ROOT . '/views/cabinet/update.php');
         return true;

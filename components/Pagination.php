@@ -69,7 +69,7 @@ class Pagination {
             if ($page == $this->current_page) {
                 $currentURI = rtrim($_SERVER['REQUEST_URI'], '/') . '/';
                 $currentURI = preg_replace('~/page-[0-9]+~', '', $currentURI);
-                $links .= '<li class="active"><a href="' . $currentURI . $this->index . $page . '">' . $page . '</a></li>';
+                $links .= '<li class="active"><a "' . $currentURI . $this->index . $page . '">' . $page . '</a></li>';
             } else {
 
                 # else - generate not active class link

@@ -10,7 +10,7 @@ class User {
      * Check if user is admin (by name and password)
      * @param string $name user name
      * @param string $password user password
-     * @return mixed 'admin' - user status, or false
+     * @return mixed  'admin'- user status, or false
      */
     public static function checkUserData($name, $password) {
 

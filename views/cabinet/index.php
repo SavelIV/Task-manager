@@ -7,7 +7,7 @@
             <h4>Добрый день, администратор!</h4>
             <p>Вам доступны следующие действия:</p>
             <ul>
-                <li><a href="/cabinet/order-id/page-1">Редактирование задач</a></li>
+                <li><a href="/cabinet/order-id/sort-desc/page-1">Редактирование задач</a></li>
             </ul>
         </div>
     </div>

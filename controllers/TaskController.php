@@ -9,20 +9,13 @@ class TaskController {
     /**
      * Action for "index" site page 
      * @param int $order [optional] sort status
+     * @param string $sort sort order
      * @param int $page [optional] current page number
      */
-    public function actionIndex($order = 'id', $page = 1) {
+    public function actionIndex($order = 'id', $sort = 'ASC', $page = 1) {
       
-        if (($_SESSION['sort'] != 'ASC') || (!isset($_SESSION['sort']))) {
-            $_SESSION['sort'] = 'ASC';
-        } else {
-            $_SESSION['sort'] = 'DESC';
-        }
-
-        $sort = $_SESSION['sort'];
-
         //get new tasks list
-        $tasksList = Task::getTasksList($order, $page, $sort);
+        $tasksList = Task::getTasksList($order, $sort, $page);
         
         // tasks amount (for page navigation)
         $total = Task::getTasksAmount();

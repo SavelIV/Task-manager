@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="logo pull-left">
-                                <a href="/index/order-id/page-1"><img src="/template/images/home/logo.png" alt="" /></a>
+                                <a href="/cabinet/order-id/sort-asc/page-1"><img src="/template/images/home/logo.png" alt="" /></a>
                             </div>
                         </div>
                         <div class="col-sm-8">
@@ -45,7 +45,7 @@
                                         <li><a href="/user/login/"><i class="fa fa-lock"></i> Вход для администратора</a></li>
                                     <?php else: ?>
                                         <li><a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a></li>
-                                        <?php endif; ?>
+                                    <?php endif; ?>
                                 </ul>
                             </div>
                         </div>

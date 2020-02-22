@@ -11,11 +11,15 @@
                     <br/>
                     <table class="table-bordered table-striped table">
                         <tr>
-                            <th><a href="/index/order-id/page-1"><i class="fa fa-sort"></i>ID задачи</a></th>
-                            <th><a href="/index/order-name/page-1"><i class="fa fa-sort"></i>Имя</a></th>
-                            <th><a href="/index/order-email/page-1"><i class="fa fa-sort"></i>Email</a></th>
+                            <th><a href="/index/order-id/sort-asc/page-<?php echo $page;?>"><i class="fa fa-angle-double-up"></i></a> ID задачи 
+                                <a href="/index/order-id/sort-desc/page-<?php echo $page;?>"><i class="fa fa-angle-double-down"></i></a></th>
+                            <th><a href="/index/order-name/sort-asc/page-<?php echo $page;?>"><i class="fa fa-angle-double-up"></i></a> Имя 
+                                <a href="/index/order-name/sort-desc/page-<?php echo $page;?>"><i class="fa fa-angle-double-down"></i></a></th>
+                            <th><a href="/index/order-email/sort-asc/page-<?php echo $page;?>"><i class="fa fa-angle-double-up"></i></a> Email 
+                                <a href="/index/order-email/sort-desc/page-<?php echo $page;?>"><i class="fa fa-angle-double-down"></i></a></th>
                             <th>Описание</th>
-                            <th><a href="/index/order-status/page-1"><i class="fa fa-sort"></i>Статус</a></th>
+                            <th><a href="/index/order-status/sort-asc/page-<?php echo $page;?>"><i class="fa fa-angle-double-up"></i></a> Статус 
+                                <a href="/index/order-status/sort-desc/page-<?php echo $page;?>"><i class="fa fa-angle-double-down"></i></a></th>
                             <th>Категория</th>
                         </tr>
                         <?php foreach ($tasksList as $task): ?>
@@ -43,7 +47,7 @@
                         <h2>Новая задача</h2>
                         <br/>
                         <form action="/create" method="post">
-                            <p>Имя (только буквы и пробелы):</p><input type="text" name="name" placeholder="Name" required/>
+                            <p>Имя (только буквы, цифры  и пробелы):</p><input type="text" name="name" placeholder="Name" required/>
                             <p>Email:</p><input type="email" name="email" placeholder="E-mail" required/>
                             <p>Описание задачи (не менее 3 символов):</p><textarea  name="text" required></textarea>
                             <br/><br/>

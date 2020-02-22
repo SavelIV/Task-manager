@@ -2,7 +2,7 @@
 
 /**
  * Abstract class AdminBase 
- * contains common logic for CabinetControllers
+ * contains common logic for Cabinet controllers
  */
 abstract class AdminBase {
 
