@@ -1,6 +1,7 @@
 # Task-manager
 Some test work.
-http://beejeetesttaskmanager.zzz.com.ua/index/order-name/sort-asc/page-1
+
+Working project:  https://taskmanager.saviv.site
 
 Необходимо создать приложение-задачник.
 Задачи состоят из:
